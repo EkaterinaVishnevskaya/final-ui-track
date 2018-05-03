@@ -24,10 +24,9 @@ public class AutoMainPageSteps extends AbstractSteps{
     }
 
     @Step("Открываем страницу {header}")
-    public void open(String header) {
+    public void open() {
         autoMainPage.open();
         autoMainPage.pageValidate();
-        pageHeaderShouldBeSameAs(header);
     }
 
     @Step("Кликаем по ссылке")

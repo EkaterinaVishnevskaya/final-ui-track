@@ -2,6 +2,7 @@ package ru.mail.example.steps;
 
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import ru.mail.example.data.FooterLink;
@@ -26,10 +27,9 @@ public class TestDrivePageSteps extends AbstractSteps {
     }
 
     @Step("Открываем страницу {header}")
-    public void open(String header) {
+    public void open() {
         testDrivePage.open();
         testDrivePage.pageValidate();
-        pageHeaderShouldBeSameAs(header);
     }
 
     @Step("Кликаем по ссылке")
@@ -51,7 +51,15 @@ public class TestDrivePageSteps extends AbstractSteps {
 
     @Step("Проверяем,  мобильная версия или полная")
     public boolean isMobile() {
-        return getDriver().findElement(By.cssSelector("#fb-root")).isEnabled()
-                ;
+        boolean res = false;
+        try {
+            getDriver().findElement(By.cssSelector("#fb-root"));
+        }
+        catch (NoSuchElementException ex){
+            res = true;
+        }
+        finally {
+            return res;
+        }
     }
 }

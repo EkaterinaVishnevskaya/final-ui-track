@@ -28,7 +28,7 @@ public class Task2 {
     @Severity(SeverityLevel.BLOCKER)
     public void test2() {
         AutoMainPageSteps steps = new AutoMainPageSteps(driverProvider.getDriver());
-        steps.open("Авто Mail.Ru: тест-драйвы, новости авторынка, авто-обзоры");
+        steps.open();
         steps.clickLink(FooterLink.Facebook);
         steps.checkUrl("https://www.facebook.com/auto.mail.ru");
     }

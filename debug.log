@@ -1,0 +1,5 @@
+[0503/153253.904:ERROR:file_io_win.cc(161)] CreateFile C:\Users\E0F1~1\AppData\Local\Temp\scoped_dir7808_19541\Crashpad\settings.dat: Системе не удается найти указанный путь. (0x3)
+[0503/153253.914:ERROR:file_io_win.cc(170)] CreateFile C:\Users\E0F1~1\AppData\Local\Temp\scoped_dir7808_19541\Crashpad\reports\a005f09f-a08b-4edf-b9d2-02d30fafbfb1.dmp: Системе не удается найти указанный путь. (0x3)
+[0503/153253.914:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0503/153708.565:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[0503/154655.220:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports

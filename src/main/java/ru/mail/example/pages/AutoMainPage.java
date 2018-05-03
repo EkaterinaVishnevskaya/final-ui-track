@@ -18,7 +18,7 @@ public class AutoMainPage extends AbstractPage  {
     private String FooterLinkSelector = "//a[@class='footer__link'][.='%s']";
 
     public WebElement getFooterLink (FooterLink link) {
-        String selector = String.format(FooterLinkSelector, link.name());
+        String selector = String.format(FooterLinkSelector, link.getName());
         return getDriver().findElement(By.xpath(selector));
     }
 }

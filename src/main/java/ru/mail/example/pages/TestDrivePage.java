@@ -8,7 +8,7 @@ import ru.mail.example.navigation.Page;
 import ru.mail.example.navigation.UrlPattern;
 
 @Page("/testdrives")
-@UrlPattern("/testdrives")
+@UrlPattern("testdrives")
 public class TestDrivePage extends AbstractPage{
     public TestDrivePage(WebDriver driver) {
         super(driver);
@@ -17,7 +17,7 @@ public class TestDrivePage extends AbstractPage{
     private String FooterLinkSelector = "//a[.='%s']";
 
     public WebElement getFooterLink (FooterLink link) {
-        String selector = String.format(FooterLinkSelector, link.name());
+        String selector = String.format(FooterLinkSelector, link.getName());
         return getDriver().findElement(By.xpath(selector));
     }
 }

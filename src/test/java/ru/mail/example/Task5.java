@@ -28,7 +28,7 @@ public class Task5 {
     @Severity(SeverityLevel.BLOCKER)
     public void test5() {
         TestDrivePageSteps steps = new TestDrivePageSteps(driverProvider.getDriver());
-        steps.open("Тест-драйвы автомобилей. Test-drive авто на сайте Авто Mail.Ru");
+        steps.open();
         steps.checkRedirect(FooterLink.Advert, "http://sales.mail.ru/ru/russia/auto/latest/#price");
     }
 }

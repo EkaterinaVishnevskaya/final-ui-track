@@ -32,7 +32,7 @@ public class Task4 {
     @Severity(SeverityLevel.BLOCKER)
     public void test4() {
         TestDrivePageSteps steps = new TestDrivePageSteps(driverProvider.getDriver());
-        steps.open("Тест-драйвы автомобилей. Test-drive авто на сайте Авто Mail.Ru");
+        steps.open();
         assertFalse(steps.isMobile());
         steps.clickLink(FooterLink.Mobile);
         assertTrue(steps.isMobile());
